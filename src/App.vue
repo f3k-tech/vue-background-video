@@ -44,7 +44,6 @@ const anchorClass = computed(() => {
 onMounted(() => {
   if (videoElement.value) {
     videoElement.value.addEventListener('ended', () => {
-      // Restart from the first video when the last one ends
       videoElement.value?.play();
     });
   }
@@ -64,7 +63,6 @@ onMounted(() => {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Ensures the video covers the background */
   z-index: -1;
 }
 
